@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About & Resume</title>
+    <title>Team 15 - Resumes</title>
     <style>
         * {
             margin: 0;
@@ -102,7 +102,13 @@
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             border: 2px solid #f0f0f0;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .resume-section h3 {
+            color: #DAA520;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
         }
 
         .resume-viewer {
@@ -113,11 +119,25 @@
             margin-top: 1rem;
         }
 
-        .download-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-top: 1.5rem;
+        .download-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #DAA520 0%, #FFD700 100%);
+            color: #000;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        .download-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(218, 165, 32, 0.4);
+            background: linear-gradient(135deg, #FFD700 0%, #DAA520 100%);
         }
 
         .btn {
@@ -146,25 +166,12 @@
             color: #333;
         }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .skill-item {
+        .team-intro {
             background: #f8f8f8;
-            padding: 1rem;
-            border-radius: 8px;
+            padding: 2rem;
+            border-radius: 10px;
             border-left: 4px solid #DAA520;
-            transition: all 0.3s ease;
-        }
-
-        .skill-item:hover {
-            background: #fff;
-            box-shadow: 0 4px 8px rgba(218, 165, 32, 0.2);
-            transform: translateX(5px);
+            margin-bottom: 2rem;
         }
 
         footer {
@@ -223,72 +230,85 @@
 </head>
 <body>
     <header>
-        <h1>About Me</h1>
-        <p>Experience, Skills & Resume</p>
+        <h1>Team 15</h1>
+        <p>Wake Forest University - MSBA Program</p>
     </header>
 
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" class="active">About & Resume</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="/TeamSite/index.html">Home</a></li>
+            <li><a href="/TeamSite/about.html" class="active">Team Resumes</a></li>
+            <li><a href="/TeamSite/index.html#contact">Contact</a></li>
         </ul>
     </nav>
 
     <main>
         <section id="about">
-            <h2>About Me</h2>
-            <div class="resume-section">
+            <h2>About Team 15</h2>
+            <div class="team-intro">
                 <div class="about-content">
-                    <p>Welcome! I'm a dedicated professional with a passion for excellence and innovation. With years of experience in my field, I bring a unique combination of technical expertise, creative problem-solving, and strong communication skills.</p>
-                    <br>
-                    <p>My approach centers on delivering high-quality results while fostering collaboration and continuous learning. I'm committed to staying current with industry trends and best practices to provide the best possible outcomes.</p>
+                    <p>Team 15 consists of five dedicated Master of Science in Business Analytics students at Wake Forest University. We bring diverse backgrounds, skills, and perspectives to create innovative data-driven solutions. Our team is committed to excellence in analytics, collaboration, and delivering impactful business insights.</p>
                 </div>
             </div>
         </section>
 
-        <section id="skills">
-            <h2>Skills & Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <strong>Leadership</strong>
-                    <p>Team management & mentoring</p>
-                </div>
-                <div class="skill-item">
-                    <strong>Communication</strong>
-                    <p>Written & verbal presentation</p>
-                </div>
-                <div class="skill-item">
-                    <strong>Problem Solving</strong>
-                    <p>Analytical & creative thinking</p>
-                </div>
-                <div class="skill-item">
-                    <strong>Project Management</strong>
-                    <p>Planning & execution</p>
-                </div>
-            </div>
-        </section>
+        <section id="resumes">
+            <h2>Team Member Resumes</h2>
 
-        <section id="resume">
-            <h2>My Resume</h2>
+            <!-- Alli Ajagbe -->
             <div class="resume-section">
-                <p>Download or view my resume below:</p>
-                
-                <div class="download-buttons">
-                    <a href="resumes/resume.pdf" class="btn" download>Download PDF Resume</a>
-                    <a href="resumes/resume.docx" class="btn" download>Download Word Resume</a>
-                </div>
+                <h3>Alli Ajagbe</h3>
+                <p>MSBA Student - Wake Forest University</p>
+                <a href="/TeamSite/resumes/alli_ajagbe.pdf" class="download-button" download>Download Resume</a>
+                <iframe class="resume-viewer" src="/TeamSite/resumes/alli_ajagbe.pdf" type="application/pdf">
+                    <p>Your browser doesn't support PDF viewing. Please <a href="/TeamSite/resumes/alli_ajagbe.pdf">download the PDF</a> to view it.</p>
+                </iframe>
+            </div>
 
-                <!-- PDF Viewer -->
-                <iframe class="resume-viewer" src="resumes/resume.pdf" type="application/pdf">
-                    <p>Your browser doesn't support PDF viewing. Please <a href="resumes/resume.pdf">download the PDF</a> to view it.</p>
+            <!-- William Bailey -->
+            <div class="resume-section">
+                <h3>William Bailey</h3>
+                <p>MSBA Student - Wake Forest University</p>
+                <a href="/TeamSite/resumes/william_bailey.pdf" class="download-button" download>Download Resume</a>
+                <iframe class="resume-viewer" src="/TeamSite/resumes/william_bailey.pdf" type="application/pdf">
+                    <p>Your browser doesn't support PDF viewing. Please <a href="/TeamSite/resumes/william_bailey.pdf">download the PDF</a> to view it.</p>
+                </iframe>
+            </div>
+
+            <!-- Sterling Hunt -->
+            <div class="resume-section">
+                <h3>Sterling Hunt</h3>
+                <p>MSBA Student - Wake Forest University</p>
+                <a href="/TeamSite/resumes/sterling_hunt.pdf" class="download-button" download>Download Resume</a>
+                <iframe class="resume-viewer" src="/TeamSite/resumes/sterling_hunt.pdf" type="application/pdf">
+                    <p>Your browser doesn't support PDF viewing. Please <a href="/TeamSite/resumes/sterling_hunt.pdf">download the PDF</a> to view it.</p>
+                </iframe>
+            </div>
+
+            <!-- Avery Maynard -->
+            <div class="resume-section">
+                <h3>Avery Maynard</h3>
+                <p>MSBA Student - Wake Forest University</p>
+                <a href="/TeamSite/resumes/avery_maynard.pdf" class="download-button" download>Download Resume</a>
+                <iframe class="resume-viewer" src="/TeamSite/resumes/avery_maynard.pdf" type="application/pdf">
+                    <p>Your browser doesn't support PDF viewing. Please <a href="/TeamSite/resumes/avery_maynard.pdf">download the PDF</a> to view it.</p>
+                </iframe>
+            </div>
+
+            <!-- Don White -->
+            <div class="resume-section">
+                <h3>Don White</h3>
+                <p>MSBA Student - Wake Forest University</p>
+                <a href="/TeamSite/resumes/don_white.pdf" class="download-button" download>Download Resume</a>
+                <iframe class="resume-viewer" src="/TeamSite/resumes/don_white.pdf" type="application/pdf">
+                    <p>Your browser doesn't support PDF viewing. Please <a href="/TeamSite/resumes/don_white.pdf">download the PDF</a> to view it.</p>
                 </iframe>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
+        <p>&copy; 2025 Team 15 - Wake Forest University MSBA. All rights reserved.</p>
     </footer>
 </body>
 </html>
