@@ -141,34 +141,6 @@
             border-bottom: 3px solid #DAA520;
         }
 
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            border: 2px solid #f0f0f0;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(218, 165, 32, 0.3);
-            border-color: #DAA520;
-        }
-
-        .card h3 {
-            color: #DAA520;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
         .btn {
             display: inline-block;
             background: linear-gradient(135deg, #DAA520 0%, #FFD700 100%);
@@ -188,6 +160,49 @@
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(218, 165, 32, 0.4);
             background: linear-gradient(135deg, #FFD700 0%, #DAA520 100%);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 2px solid #f0f0f0;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #000;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #DAA520;
+        }
+
+        .form-group textarea {
+            resize: vertical;
         }
 
         footer {
@@ -275,13 +290,36 @@
 
         <section id="contact">
             <h2>Get In Touch</h2>
-            <p>Interested in learning more about Team 15 or discussing potential opportunities? Feel free to reach out to any of our team members.</p>
-            <a href="mailto:team15@wfu.edu" class="btn">Contact Team 15</a>
+            <p>Interested in learning more about Model Citizens - Team 15 or discussing potential opportunities? Fill out the form below and we'll get back to you.</p>
+            
+            <form action="https://formspree.io/f/xovprlo" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Send Message</button>
+            </form>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Team 15 - Wake Forest University MSBA. All rights reserved.</p>
+        <p>&copy; 2025 Model Citizens - Team 15 - Wake Forest University MSBA. All rights reserved.</p>
     </footer>
 </body>
 </html>
